@@ -37,7 +37,7 @@
       <li><div class="card"><span class="card__title">This device</span><span class="card__desc">Any folder on your PC. Photos are read straight from the folder.</span></div></li>
       <li><div class="card"><span class="card__title">iCloud Photos</span><span class="card__desc">Reads the iCloud Photos folder that iCloud for Windows syncs to your PC. Tiny Slideshow never connects to Apple's servers.</span></div></li>
       <li><div class="card"><span class="card__title">OneDrive</span><span class="card__desc">Sign in with your Microsoft account the first time, then choose a folder.</span></div></li>
-      <li><div class="card"><span class="card__title">Google Photos</span><span class="card__desc">Sign in with Google, then pick exactly which photos to show in Google's own picker. The app only sees what you pick.</span></div></li>
+      <li><div class="card"><span class="card__title">Google Photos</span><span class="card__desc">Sign in with Google, then pick exactly which photos to show in Google's own picker. The app only sees what you pick, and remembers your selection between launches.</span></div></li>
     </ul>
 
     <h2 id="features">What it does</h2>
@@ -45,11 +45,11 @@
       <li><strong>Stays out of the way.</strong> The window isn't forced on top of your other apps, and it won't stop your computer from going to sleep.</li>
       <li><strong>Windowed or full screen.</strong> Size it to fit your desktop layout, or fill the screen.</li>
       <li><strong>Your pace.</strong> Choose how long each photo shows (the default is 5 seconds) and turn shuffle on or off.</li>
-      <li><strong>Picks up where you left off.</strong> For folders on your PC, iCloud, and OneDrive, it reopens to the source you were last showing.</li>
+      <li><strong>Picks up where you left off.</strong> Whichever source you choose, it reopens to it on your next launch, including your Google Photos selection, which Google keeps for about a week before asking you to pick again.</li>
       <li><strong>Stays current.</strong> Add or remove photos in a folder on your PC, including your iCloud folder, and the running slideshow updates by itself.</li>
       <li><strong>Room for big libraries.</strong> Show up to 50,000 images, and filter by image type.</li>
       <li><strong>Light or dark.</strong> Match your system theme or choose one.</li>
-      <li><strong>Common formats.</strong> BMP, JPG/JPEG, GIF, PNG, TIFF and ICO.</li>
+      <li><strong>Common formats.</strong> BMP, JPG/JPEG, GIF, PNG, TIFF, ICO and HEIC/HEIF, the format iPhones use.</li>
     </ul>
 
     <h2 id="screens">A closer look</h2>
@@ -72,6 +72,20 @@
     <p class="callout">Tiny Slideshow never stores copies of your photos. It shows them directly from the source you choose, and nothing is copied to or kept by the app.<span class="note">There are no ads, no analytics and no trackers. Read the full <a href="https://hringer.com/privacy">privacy policy</a>.</span></p>
 
     <h2 id="whats-new">What's new</h2>
+    <h3>Version 2.1</h3>
+    <ul>
+      <li><strong>New:</strong> HEIC/HEIF photos, the format iPhones use, now show alongside your other photos. If your PC is missing the Microsoft codec extensions needed to display them, Settings tells you and links to them.</li>
+      <li><strong>New:</strong> your Google Photos selection is now remembered between launches, like your other sources. Google keeps a selection for about a week, then asks you to pick again.</li>
+      <li><strong>Fixed:</strong> long Google Photos slideshows no longer stop loading photos after about an hour. They keep playing for as long as your selection lasts, including after your PC wakes from sleep.</li>
+      <li><strong>Fixed:</strong> when a Google Photos selection does expire, the slideshow stops and tells you it's time to pick again, instead of getting stuck.</li>
+      <li><strong>Fixed:</strong> changing your mind about a photo source no longer costs you the one you had. Backing out of a source keeps your photos, keeps you signed in, and resumes your slideshow.</li>
+      <li><strong>Fixed:</strong> if you close the OneDrive sign-in page without finishing, Tiny Slideshow stops waiting after five minutes and resumes your slideshow.</li>
+      <li><strong>Fixed:</strong> the Google Photos sign-in page no longer times out before you can finish reading it.</li>
+      <li><strong>Fixed:</strong> image type filters (like turning off GIF) now stay saved between launches.</li>
+      <li><strong>Fixed:</strong> .tif files now always show up alongside .tiff.</li>
+      <li><strong>Changed:</strong> "Get help" and "Send feedback" now open your email app.</li>
+    </ul>
+
     <h3>Version 2.0</h3>
     <ul>
       <li>Added iCloud and OneDrive as photo sources. iCloud reads from the local iCloud Photos folder that iCloud for Windows syncs to your PC; OneDrive connects to your OneDrive account.</li>
@@ -85,6 +99,7 @@
       <li>Windows 10 (version 1809) or later, on x86 or x64.</li>
       <li>For iCloud Photos: iCloud for Windows installed and syncing your photos to your PC.</li>
       <li>For OneDrive: a Microsoft account. For Google Photos: a Google account.</li>
+      <li>For HEIC/HEIF photos: Microsoft's HEIF Image Extension (free) and HEVC Video Extensions add-on, which not every Windows PC has. Tiny Slideshow skips HEIC photos it can't decode, and Settings tells you whether your PC can display them.</li>
     </ul>
 
     <p class="actions"><a class="button" href="https://apps.microsoft.com/detail/9ND55R7XN4SM">Get it on the Microsoft Store</a></p>
